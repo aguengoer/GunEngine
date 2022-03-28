@@ -19,6 +19,11 @@
     <ClInclude Include="src\GunEngine\Log.h">
       <Filter>GunEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GunEngine\Events\Event.h" />
+    <ClInclude Include="src\GunEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\GunEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\GunEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\supch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp">
@@ -27,5 +32,6 @@
     <ClCompile Include="src\GunEngine\Log.cpp">
       <Filter>GunEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\supch.cpp" />
   </ItemGroup>
 </Project>

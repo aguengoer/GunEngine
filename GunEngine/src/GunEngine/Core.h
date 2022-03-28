@@ -10,3 +10,4 @@
 	#error GunEngine only supports Windows!
 #endif // GE_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)

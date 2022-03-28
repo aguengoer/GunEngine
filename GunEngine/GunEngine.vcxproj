@@ -147,11 +147,17 @@
     <ClInclude Include="src\GunEngine\Application.h" />
     <ClInclude Include="src\GunEngine\Core.h" />
     <ClInclude Include="src\GunEngine\Entrypoint.h" />
+    <ClInclude Include="src\GunEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\GunEngine\Events\Event.h" />
+    <ClInclude Include="src\GunEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\GunEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\GunEngine\Log.h" />
+    <ClInclude Include="src\supch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp" />
     <ClCompile Include="src\GunEngine\Log.cpp" />
+    <ClCompile Include="src\supch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
