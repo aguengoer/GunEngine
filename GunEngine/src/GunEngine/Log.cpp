@@ -1,3 +1,5 @@
+#include "gepch.h"
+
 #include "Log.h"
 
 namespace GunEngine {

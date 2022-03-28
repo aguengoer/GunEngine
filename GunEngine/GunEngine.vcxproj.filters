@@ -4,6 +4,9 @@
     <Filter Include="GunEngine">
       <UniqueIdentifier>{C50A31F7-3175-E56D-7AB3-9613E65CC3C2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GunEngine\Events">
+      <UniqueIdentifier>{09478002-F53F-9F54-1E72-84D90ACA7E60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GunEngine.h" />
@@ -16,14 +19,22 @@
     <ClInclude Include="src\GunEngine\Entrypoint.h">
       <Filter>GunEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GunEngine\Events\ApplicationEvent.h">
+      <Filter>GunEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GunEngine\Events\Event.h">
+      <Filter>GunEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GunEngine\Events\KeyEvent.h">
+      <Filter>GunEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GunEngine\Events\MouseEvent.h">
+      <Filter>GunEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\GunEngine\Log.h">
       <Filter>GunEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\GunEngine\Events\Event.h" />
-    <ClInclude Include="src\GunEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\GunEngine\Events\MouseEvent.h" />
-    <ClInclude Include="src\GunEngine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\supch.h" />
+    <ClInclude Include="src\gepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp">
@@ -32,6 +43,6 @@
     <ClCompile Include="src\GunEngine\Log.cpp">
       <Filter>GunEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\supch.cpp" />
+    <ClCompile Include="src\gepch.cpp" />
   </ItemGroup>
 </Project>
