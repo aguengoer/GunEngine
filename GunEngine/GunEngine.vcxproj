@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GunEngine\Log.h" />
     <ClInclude Include="src\GunEngine.h" />
     <ClInclude Include="src\GunEngine\Application.h" />
     <ClInclude Include="src\GunEngine\Core.h" />
     <ClInclude Include="src\GunEngine\Entrypoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GunEngine\Log.cpp" />
     <ClCompile Include="src\GunEngine\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -69,6 +71,7 @@
       <PreprocessorDefinitions>GE_BUILD_DLL;GE_PLATFORM_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)GunEngine\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,6 +87,7 @@
       <PreprocessorDefinitions>GE_BUILD_DLL;GE_PLATFORM_WINDOWS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)GunEngine\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -27,9 +27,15 @@
     <ClInclude Include="src\GunEngine\Entrypoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\GunEngine\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GunEngine\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

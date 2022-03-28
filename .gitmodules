@@ -1,0 +1,3 @@
+[submodule "GunEngine/vendor/spdlog"]
+	path = GunEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
