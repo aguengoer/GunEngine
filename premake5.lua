@@ -53,7 +53,7 @@ project "GunEngine"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "Off"
+		staticruntime "On"
 		systemversion "latest"
 		
 		defines{
@@ -69,15 +69,15 @@ project "GunEngine"
 
 	filter "configurations:Debug"
 		defines "GE_DEBUG"
-		runtime "Debug"
+		buildoptions "/MDd"
 		symbols "On"
 	filter "configurations:Release"
 		defines "GE_RELEASE"
-		runtime "Release"
+		buildoptions "/MDd"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "GE_DIST"
-		runtime "Release"
+		buildoptions "/MDd"
 		optimize "On"
 
 
@@ -110,7 +110,7 @@ project "Sandbox"
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "Off"
+		staticruntime "On"
 		systemversion "latest"
 		
 		defines{
@@ -120,13 +120,13 @@ project "Sandbox"
 	
 	filter "configurations:Debug"
 		defines "GE_DEBUG"
-		runtime "Debug"
+		buildoptions "/MDd"
 		symbols "On"
 	filter "configurations:Release"
 		defines "GE_RELEASE"
-		runtime "Release"
+		buildoptions "/MDd"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "GE_DIST"
-		runtime "Release"
+		buildoptions "/MDd"
 		optimize "On"	

@@ -83,7 +83,8 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,7 +110,8 @@ IF EXIST ..\bin\Debug-windows-x86_64\GunEngine\GunEngine.dll\ (xcopy /Q /E /Y /I
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -136,7 +138,8 @@ IF EXIST ..\bin\Release-windows-x86_64\GunEngine\GunEngine.dll\ (xcopy /Q /E /Y 
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -160,6 +163,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\GunEngine\GunEngine.dll\ (xcopy /Q /E /Y /I 
     <ClInclude Include="src\GunEngine\Events\Event.h" />
     <ClInclude Include="src\GunEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\GunEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\GunEngine\Layer.h" />
+    <ClInclude Include="src\GunEngine\LayerStack.h" />
     <ClInclude Include="src\GunEngine\Log.h" />
     <ClInclude Include="src\GunEngine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\GunEngine\Window.h" />
@@ -167,6 +172,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\GunEngine\GunEngine.dll\ (xcopy /Q /E /Y /I 
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp" />
+    <ClCompile Include="src\GunEngine\Layer.cpp" />
+    <ClCompile Include="src\GunEngine\LayerStack.cpp" />
     <ClCompile Include="src\GunEngine\Log.cpp" />
     <ClCompile Include="src\GunEngine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\gepch.cpp">

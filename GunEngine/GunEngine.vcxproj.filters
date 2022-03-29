@@ -37,6 +37,12 @@
     <ClInclude Include="src\GunEngine\Events\MouseEvent.h">
       <Filter>GunEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\GunEngine\Layer.h">
+      <Filter>GunEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GunEngine\LayerStack.h">
+      <Filter>GunEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\GunEngine\Log.h">
       <Filter>GunEngine</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GunEngine\Application.cpp">
+      <Filter>GunEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GunEngine\Layer.cpp">
+      <Filter>GunEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GunEngine\LayerStack.cpp">
       <Filter>GunEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\GunEngine\Log.cpp">
