@@ -7,6 +7,12 @@
     <Filter Include="GunEngine\Events">
       <UniqueIdentifier>{09478002-F53F-9F54-1E72-84D90ACA7E60}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GunEngine\Platform">
+      <UniqueIdentifier>{B934CCBF-A518-8D15-0E79-8768FA7B7797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GunEngine\Platform\Windows">
+      <UniqueIdentifier>{F387BBC6-DF97-6797-4851-CCB534805630}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GunEngine.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\GunEngine\Log.h">
       <Filter>GunEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GunEngine\Platform\Windows\WindowsWindow.h">
+      <Filter>GunEngine\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GunEngine\Window.h">
+      <Filter>GunEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\gepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\GunEngine\Log.cpp">
       <Filter>GunEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GunEngine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>GunEngine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\gepch.cpp" />
   </ItemGroup>

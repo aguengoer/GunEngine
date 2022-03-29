@@ -1,5 +1,7 @@
 workspace "GunEngine"
 	architecture "x64"
+	startproject "Sandbox"
+
 
 	configurations
 	{
@@ -9,6 +11,16 @@ workspace "GunEngine"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "GunEngine/vendor/GLFW/include"
+
+include "GunEngine/vendor/GLFW"
+
+group "Dependencies"
+		include "GunEngine/vendor/GLFW"
+group ""
 
 project "GunEngine"
 	location "GunEngine"
@@ -30,16 +42,23 @@ project "GunEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 		
 		defines{
 			"GE_PLATFORM_WINDOWS",
-			"GE_BUILD_DLL",
+			"GE_BUILD_DLL"
 		}
 		
 		postbuildcommands
