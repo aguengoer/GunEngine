@@ -15,11 +15,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "GunEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "GunEngine/vendor/Glad/include"
 
 include "GunEngine/vendor/GLFW"
+include "GunEngine/vendor/Glad"
 
 group "Dependencies"
 		include "GunEngine/vendor/GLFW"
+		include "GunEngine/vendor/Glad"
 group ""
 
 project "GunEngine"
@@ -42,12 +45,14 @@ project "GunEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -58,7 +63,8 @@ project "GunEngine"
 		
 		defines{
 			"GE_PLATFORM_WINDOWS",
-			"GE_BUILD_DLL"
+			"GE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands
