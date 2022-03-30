@@ -4,6 +4,7 @@
 #include "GunEngine/Application.h"
 #include "GunEngine/Log.h"
 #include "GunEngine/Layer.h"
+#include "GunEngine/ImGui/ImGuiLayer.h"
 
 
 //---- Entry Point ------

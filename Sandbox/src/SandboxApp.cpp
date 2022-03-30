@@ -22,6 +22,7 @@ class Sandbox : public GunEngine::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new GunEngine::ImGuiLayer());
 	}
 
 	~Sandbox() {

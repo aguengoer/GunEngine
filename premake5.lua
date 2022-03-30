@@ -16,9 +16,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "GunEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "GunEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "GunEngine/vendor/imgui"
+
 
 include "GunEngine/vendor/GLFW"
 include "GunEngine/vendor/Glad"
+include "GunEngine/vendor/imgui"
+
 
 group "Dependencies"
 		include "GunEngine/vendor/GLFW"
@@ -46,14 +50,16 @@ project "GunEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links 
 	{ 
 		"GLFW",
 		"Glad",
-		"opengl32.lib"
+		"opengl32.lib",
+		"ImGui"
 	}
 
 	filter "system:windows"
@@ -64,7 +70,8 @@ project "GunEngine"
 		defines{
 			"GE_PLATFORM_WINDOWS",
 			"GE_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+			"GLFW_INCLUDE_NONE",
+			"IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
 		}
 		
 		postbuildcommands

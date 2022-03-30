@@ -4,3 +4,6 @@
 [submodule "GunEngine/vendor/GLFW"]
 	path = GunEngine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "GunEngine/vendor/imgui"]
+	path = GunEngine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
